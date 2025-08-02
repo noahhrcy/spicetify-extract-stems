@@ -1,0 +1,7 @@
+{
+  "name": "ExtractStems",
+  "description": "Adds a button to extract stems via a local server",
+  "main": "extractStems.js",
+  "version": "1.0.0",
+  "author": "ChatGPT"
+}

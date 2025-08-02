@@ -1,7 +1,22 @@
-{
-  "name": "ExtractStems",
-  "description": "Adds a button to extract stems via a local server",
-  "main": "ExtractStems.js",
-  "version": "1.0.0",
-  "author": "ChatGPT"
-}
+[
+  {
+    "name": "Spicetify accapella downloader",
+    "description": "Spicetify extension to download accapella from Spotify.",
+    "preview": "img/logo.png",
+    "main": "extractStems.js",
+    "readme": "README.md",
+    "authors": [
+        { "name": "Henricy Noah", "url": "https://github.com/noahhrcy" },
+        { "name": "Tibo", "url": "https://github.com/TibOwO" }
+    ],
+    "tags": ["utilities"]
+  },
+  {
+    "name": "AccapellaDownloader",
+    "description": "Spicetify extension to download accapella from Spotify.",
+    "preview": "Nan",
+    "main": "https://github.com/noahhrcy/spicetify-extract-stems/extractStems.js",
+    "readme": "https://github.com/noahhrcy/spicetify-extract-stems/README.md",
+    "branch": "my-branch"
+  }
+]

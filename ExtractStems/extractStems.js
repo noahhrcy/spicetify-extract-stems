@@ -1,5 +1,5 @@
 (function ExtractStems() {
-  const buttonId = "extract-stems-btn";
+  const buttonId = "main-nowPlayingBar-right";
   const serverUrl = "http://localhost:5000";
 
   function createButton() {

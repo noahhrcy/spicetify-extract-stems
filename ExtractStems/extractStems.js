@@ -1,0 +1,43 @@
+(function ExtractStems() {
+  const buttonId = "extract-stems-btn";
+
+  async function createButton() {
+    if (!Spicetify?.Player || document.getElementById(buttonId)) {
+      return;
+    }
+
+    const btn = document.createElement("button");
+    btn.id = buttonId;
+    btn.className = "control-button";
+    btn.textContent = "Extraire les stems";
+    btn.addEventListener("click", async () => {
+      const track = Spicetify.Player.data?.item;
+      if (!track) {
+        Spicetify.showNotification("Aucun morceau en cours");
+        return;
+      }
+      const title = track.name;
+      const artist = track.artists?.[0]?.name || "";
+      const query = encodeURIComponent(`${artist} - ${title}`);
+      try {
+        const res = await fetch(`http://localhost:5000/process?track=${query}`);
+        const data = await res.json();
+        if (res.ok && data.url) {
+          Spicetify.showNotification(`Stems prêts: ${data.url}`);
+        } else {
+          throw new Error(data.error || "Erreur inconnue");
+        }
+      } catch (e) {
+        Spicetify.showNotification(`Erreur: ${e.message}`);
+      }
+    });
+
+    const controls = document.querySelector(".main-nowPlayingBar-extraControls");
+    if (controls) {
+      controls.appendChild(btn);
+    }
+  }
+
+  createButton();
+  setInterval(createButton, 2000);
+})();

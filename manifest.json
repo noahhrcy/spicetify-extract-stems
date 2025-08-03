@@ -1,6 +1,6 @@
 [
   {
-    "name": "Spicetify accapella downloader",
+    "name": "Spicetify acapella Downloader",
     "description": "Spicetify extension to download accapella from Spotify.",
     "preview": "logo.png",
     "main": "extractStems.js",

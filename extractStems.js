@@ -1,7 +1,7 @@
 (function ExtractStems() {
   const buttonId = "main-nowPlayingBar-right";
   const serverUrl = "http://localhost:5000";
-  const fallbackUrl = "https://raw.githubusercontent.com/noahhrcy/stem-extraction-server/main/how_to_install.txts"; // 🔁 à personnaliser
+  const fallbackUrl = "https://raw.githubusercontent.com/noahhrcy/stem-extraction-server/main/how_to_install.txt"; // 🔁 à personnaliser
 
   function createButton() {
     if (!Spicetify?.Player || document.getElementById(buttonId)) return;
